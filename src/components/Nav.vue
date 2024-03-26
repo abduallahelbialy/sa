@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3 p-4">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3 p-4 position-relative z-3">
     <div class="container">
       <router-link class="navbar-brand" to="/">
         <div style="width: 50%">
@@ -21,7 +21,7 @@
         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
           <li class="nav-item" v-for="link in links" :key="link.id">
             <router-link
-              :class="{ 'nav-link': true, 'active': currentPath === link.path }"
+              :class="{ 'nav-link': true, active: currentPath === link.path }"
               :to="link.path"
               exact
             >
@@ -29,9 +29,13 @@
             </router-link>
           </li>
         </ul>
-        <form class="d-flex gap-3" role="search">
-          <button class="btn btn-outline-success btn px-4" type="submit">sign in</button>
-          <button class="btn btn-outline-success btn px-4" type="submit">sign up</button>
+        <form class="d-flex gap-3 flex-wrap" role="search">
+          <button class="btn btn-outline-success btn px-4 py-2" type="submit">
+            sign in
+          </button>
+          <button class="btn btn-outline-success btn px-4 py-2" type="submit">
+            sign up
+          </button>
         </form>
       </div>
     </div>
@@ -63,7 +67,7 @@ export default {
 
 <style scoped>
 .btn {
-  background: linear-gradient(to left, #5F5AFF, #FD0BB5);
+  background: linear-gradient(to left, #5f5aff, #fd0bb5);
   color: white;
   border: none;
 }
@@ -73,6 +77,6 @@ export default {
 }
 
 .navbar-nav .nav-link.active {
-  color: var(--pink)!important;
+  color: var(--pink) !important;
 }
 </style>

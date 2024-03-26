@@ -1,8 +1,8 @@
 <template>
   <div class="pop_parent">
-    <div class="container">
+    <div class="container-fluid ">
       <div class="row">
-        <div
+       <div
           style="height: 500px"
           class="loginCard bg-white col-md-10 p-0 col-lg-10 m-auto"
           v-if="show"
@@ -39,11 +39,10 @@
             <div class="paragraphmana paragraph2 col-lg-6 mr-5"></div>
           </div>
         </div>
-      </div>
-      <button class="button_sec1" @click="toimg">Join tabor</button>
+          <button class="button_sec1" @click="toimg" style="width: 82px">Join tabor</button>
       <section class="sec1 col-lg-12 section-animation">
         <div class="layout_main_idea">
-          <button class="main-btn wow bounceInDown" @click="toimg">
+          <button class="main-btn wow bounceInDow" @click="toimg">
             <p>Join tabor</p>
             <img src="../assets/People.png" alt="" />
           </button>
@@ -54,7 +53,7 @@
       >
         <div class="col-lg-6 left-sec2 wow bounceIn"></div>
         <div class="col-lg-5 right-sec2 wow bounceInRight">
-          <!-- <img src="../assets/sahm.png" alt="" /> -->
+          <img src="../assets/sahm.png" alt="" />
           <h2>your time is gold</h2>
           <p style="color: #5f5aff; font-size: 24px; font-weight: bold">
             TABOR
@@ -145,17 +144,11 @@
               </div>
             </div></swiper-slide
           >
-         
-
-          <!-- <div class="swiper-button-next">
-            <img src="../assets/Group 39244.png" alt="" />
-          </div>
-          <div class="swiper-button-prev me-5">
-            <img src="../assets/Group 39245.png" alt="" />
-          </div> -->
         </swiper>
       </section>
      <Inputs/>
+      </div>
+    
     </div>
   </div>
 </template>
@@ -179,6 +172,28 @@ import five from "../assets/c6.png";
 import six from "../assets/c7.png";
 import sefen from "../assets/c8.png";
 import ar from "../assets/Group 44504.png";
+import { ref } from 'vue';
+import {
+  setupMainButton,
+  setupSecondaryButtons,
+  setupCloseButton,
+  setupOtherChoice,
+  setupOtherChoice2,
+  setupScrollEvent,
+  setupSwiper,
+  setupLabelClickEvent
+} from '../components/jsvue/inde'
+$(document).ready(function () {
+  setupMainButton();
+  setupSecondaryButtons();
+  setupCloseButton();
+  setupOtherChoice();
+  setupOtherChoice2();
+  setupScrollEvent();
+  setupSwiper();
+  setupLabelClickEvent();
+  new WOW().init();
+});
 export default {
   name: "home",
   data() {
@@ -206,11 +221,17 @@ export default {
       ],
     };
   },
-  setup() {
-    return {
-      modules: [Autoplay, Pagination, Navigation],
-    };
+      methods: {
+    toimg() {
+      this.show = !this.show;
+    },
   },
+  setup() {
+    const modules = ref([Autoplay, Pagination, Navigation]);
+
+    return { modules };
+  },
+
   components: {
     Swiper,
     SwiperSlide,
@@ -218,103 +239,8 @@ export default {
     Twoinput,
     Form,
   },
-  methods: {
-    toimg() {
-      this.show = !this.show;
-    },
-  },
-  mounted() {
-    // Initialize Swiper
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
 
-    // Handle other jQuery functionality
-    $(".main-btn").click(() => {
-      $(".pop_parent_").toggleClass("ac_tive");
-    });
-
-    $(".button_sec1").click(() => {
-      $(".pop_parent_").toggleClass("ac_tive");
-    });
-
-    $(".right-sec2 button").click(() => {
-      $(".pop_parent_").toggleClass("ac_tive");
-    });
-
-    $(".close").click(() => {
-      $(".pop_parent_").toggleClass("ac_tive");
-    });
-
-    $(".other_choice").change(() => {
-      console.log("changes");
-      if ($(".other_choice").val() == "other") {
-        $(".append_").append(`
-            <div class="form-group">
-              <label for="">category Name</label> <br>
-              <input type="text" name="name" placeholder="category Name" id="input-index">
-            </div>
-          `);
-        $(".hd").remove();
-        $(".app").append(`
-            <div class="form-group">
-              <label for="">your mobile number</label> <br>
-              <input type="number" name="category" placeholder="number" name="category" id="input-index" class="i_i i_i2">
-            </div>
-          `);
-      }
-    });
-
-    $(".other_choice2").change(() => {
-      console.log("changes2");
-      if ($(".other_choice2").val() == "other") {
-        $(".append_2").append(`
-            <div class="form-group">
-              <label for="">category Name</label> <br>
-              <input type="text" name="name" placeholder="category Name" class="i_i">
-            </div>
-          `);
-
-        $(".company").remove();
-        $(".compadd").append(`
-            <div class="form-group ">
-              <label for="">company email</label> <br>
-              <input type="email" name="category" placeholder="Modifier Name" name="category" class="i_i">
-            </div>
-          `);
-      }
-    });
-
-    window.onscroll = () => {
-      if (window.scrollY >= 590) {
-        $(".button_sec1").css({
-          bottom: "50px",
-          right: "76px",
-        });
-      } else {
-        $(".button_sec1").css({
-          bottom: "2750px",
-          right: "2950px",
-        });
-      }
-    };
-
-    $("label").click(function () {
-      $(".tab").hide();
-      $(this).next(".tab").fadeIn(500);
-    });
-
-    new WOW().init();
-  },
+ 
 };
 </script>
 
@@ -324,8 +250,10 @@ export default {
   background: linear-gradient(to right, #5f5aff, #fd0bb5);
   border-radius: 40px;
   color: white;
-  width: 67%;
+  width: 59%;
   max-height: 500px !important;
+  position: relative;
+  z-index: 111111;
 }
 
 .mens_down {
@@ -391,6 +319,15 @@ export default {
   -webkit-animation: scale 0.5s infinite ease-in;
 }
 @media (max-width: 477px) {
+  .section-animation[data-v-08e32229] {
+    animation: none;
+    -webkit-animation: none;
+}
+.main-btn {
+   
+    width: 332px;
+   
+}
   .card-index {
     width: 46% !important;
     flex-direction: column;
@@ -523,10 +460,10 @@ export default {
   }
 }
 
-.section-animation {
+/* .section-animation {
   animation: scale_ 0.5s infinite ease-in;
   -webkit-animation: scale_ 0.5s infinite ease-in;
-}
+} */
 
 @keyframes scale_ {
   0% {

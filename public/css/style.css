@@ -255,10 +255,13 @@ header .container {
     border: none;
     background: transparent;
     top: 20px;
-    right: 20px;
+    right: 24px;
     color: white;
 }
-
+.card_back .layer .img_btn:hover{
+    background-color: rgb(230, 80, 80);
+    border-radius: 20px;
+}
 .card_back .layer .img_btn img {
     /* background-color: red; */
     position: relative;

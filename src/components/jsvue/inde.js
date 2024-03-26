@@ -1,16 +1,26 @@
-$(document).ready(function () {
+export function setupMainButton() {
   $(".main-btn").click(() => {
     $(".pop_parent_").toggleClass("ac_tive");
   });
+}
+
+export function setupSecondaryButtons() {
   $(".button_sec1").click(() => {
     $(".pop_parent_").toggleClass("ac_tive");
   });
+
   $(".right-sec2 button").click(() => {
     $(".pop_parent_").toggleClass("ac_tive");
   });
+}
+
+export function setupCloseButton() {
   $(".close").click(() => {
     $(".pop_parent_").toggleClass("ac_tive");
   });
+}
+
+export function setupOtherChoice() {
   $(".other_choice").change(() => {
     console.log("changes");
     if ($(".other_choice").val() == "other") {
@@ -30,6 +40,9 @@ $(document).ready(function () {
                     `);
     }
   });
+}
+
+export function setupOtherChoice2() {
   $(".other_choice2").change(() => {
     console.log("changes2");
     if ($(".other_choice2").val() == "other") {
@@ -50,6 +63,9 @@ $(document).ready(function () {
                     `);
     }
   });
+}
+
+export function setupScrollEvent() {
   window.onscroll = () => {
     if (window.scrollY >= 590) {
       $(".button_sec1").css({
@@ -63,7 +79,9 @@ $(document).ready(function () {
       });
     }
   };
+}
 
+export function setupSwiper() {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -76,10 +94,11 @@ $(document).ready(function () {
       clickable: true,
     },
   });
-  // location.reload();
+}
+
+export function setupLabelClickEvent() {
   $("label").click(function () {
     $(".tab").hide();
     $(this).next(".tab").fadeIn(500);
   });
-});
-new WOW().init();
+}
