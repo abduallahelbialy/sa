@@ -8,14 +8,14 @@
     </div>
     <section class="sec1-tabs">
       <div class="container">
-        <ul class="tabs">
-          <li id="label"  @click="activeTap = '1'"
+        <ul class="tabs ">
+          <li class="mb-3" id="label"  @click="activeTap = '1'"
               :class="{ active: activeTap === '1' }" >my information</li>
-          <li id="label"  @click="activeTap = '2'"
+          <li class="mb-3" id="label"  @click="activeTap = '2'"
               :class="{ active: activeTap === '2' }" >my current tabor</li>
-          <li id="label"  @click="activeTap = '3'"
+          <li class="mb-3" id="label"  @click="activeTap = '3'"
               :class="{ active: activeTap === '3' }" >previous tabor</li>
-          <li id="label"  @click="activeTap = '4'"
+          <li class="mb-3" id="label"  @click="activeTap = '4'"
               :class="{ active: activeTap === '4' }">favorite list</li>
         </ul>
         <div class="content">
@@ -26,11 +26,11 @@
                   <div class="d-flex w-100 kha_">
                     <div class="form-group">
                       <label for="">your Name</label><br />
-                      <input class="inpo" type="text" name="" id="" />
+                      <input class="inpo" type="text" name="" id="" required />
                     </div>
                     <div class="form-group">
                       <label for="">Email</label><br />
-                      <input class="inpo" type="text" name="" id="" />
+                      <input class="inpo" type="text" name="" id="" required />
                     </div>
                   </div>
                   <div class="d-flex w-100 kha_">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                       <label for="">country</label><br />
-                      <select name="" id="khara" class="khara_">
+                      <select name="" id="khara" class="khara_" required>
                         <option value="">palestine</option>
                         <option value="">eygpt</option>
                         <option value="">usa</option>
@@ -53,13 +53,13 @@
                   <div class="d-flex w-100 kha_">
                     <div class="form-group">
                       <label for="">date of birth</label><br />
-                      <input type="date" name="" id="date" class="jj_data" />
+                      <input type="date" name="" id="date" class="jj_data" required />
                     </div>
                     <div class="form-group">
                       <label for="">region city</label><br />
-                      <select name="" id="khara" class="khara_">
+                      <select name="" id="khara" class="khara_" required>
                         <option value="">gaza</option>
-                        <option value="">khaleel</option>
+                        <option value="">mansoura</option>
                         <option value="">quds</option>
                         <option value="">zeft</option>
                       </select>
@@ -189,7 +189,7 @@
                           </div>
                         </div>
                         <div
-                          class="d-flex justify-content-between align-items-center"
+                          class="d-flex justify-content-between align-items-center imgcost"
                         >
                           <h5 class="text-secondary">{{ previou.pay }}</h5>
                           <div class="dowload-img mt-4">
@@ -210,7 +210,6 @@
                               class="img-roud"
                             />
                             <div v-if="isLoading">جاري التحميل...</div>
-                            <!-- لا حاجة لاستخدام عنصر الإدخال -->
                           </div>
                         </div>
                       </div>
@@ -278,17 +277,17 @@
 </template>
 
 <script>
-// import {
-//   setupSwitchButton,
-//   setupListClick,
-//   setupWOW,
-// } from "../components/jsvue/profile";
-// $(document).ready(function () {
-//   setupSwitchButton();
-//   setupListClick();
+import {
+  setupSwitchButton,
+  setupListClick,
+  setupWOW,
+} from "../components/jsvue/profile";
+$(document).ready(function () {
+  setupSwitchButton();
+  setupListClick();
 
-//   setupWOW();
-// });
+  setupWOW();
+});
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/zoom";
@@ -307,7 +306,7 @@ export default {
 activeTap: "1",
       imageUrl: null,
       isLoading: false,
-            currentPath: this.$route.path, // حفظ المسار الحالي
+            currentPath: this.$route.path, //   
 
       silders: [
         { id: 1, title: "Lorem ipsum dolor sit amet.", img: slide },
@@ -387,12 +386,10 @@ activeTap: "1",
     };
   },
   watch: {
-    // المراقبة للمسار الحالي
     currentPath(newPath, oldPath) {
       if (newPath === oldPath) {
         return;
       }
-      // إعادة تحميل البيانات هنا أو اتخاذ الإجراءات اللازمة
     }
   },
   mounted() {
@@ -410,6 +407,105 @@ activeTap: "1",
 </script>
 
 <style scoped>
+@media (max-width:477px) {
+  .previous-reservations {
+    
+    width: 100%;
+}
+.swiper-button-next,.swiper-button-prev{
+  display: none;
+}
+.save_btn button {
+    position: relative !important;
+    right: 113px !important;
+}
+.tab form input {
+    width: 272px !important;
+    position: relative;
+    left: 37px;
+}
+.tab form {
+    width: 100%;
+    margin: auto;
+}
+.khara_ {
+    width: 272px !important;
+    position: relative;
+    left: 40px;
+}
+.form-group .d-flex span {
+    width: 80px;
+}
+#low {
+    width: 191px !important;
+    right: 30px;
+}
+.zeft span {
+    position: relative;
+    left: 46px;
+}
+.titles p {
+    /* width: 90px; */
+    font-size: 9px !important;
+}
+.img-roud[data-v-f32632b7] {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+}
+@media (max-width:799px) {
+  .previous-reservations {
+    
+    width: 100%;
+}
+.swiper-button-next,.swiper-button-prev{
+  display: none;
+}
+.save_btn button {
+    position: relative !important;
+    right: 113px !important;
+}
+.tab form input {
+    width: 272px !important;
+    position: relative;
+    left: 37px;
+}
+.tab form {
+    width: 100%;
+    margin: auto;
+}
+.khara_ {
+    width: 272px !important;
+    position: relative;
+    left: 40px;
+}
+.form-group .d-flex span {
+    width: 80px;
+}
+#low {
+    width: 191px !important;
+    right: 30px;
+}
+.zeft span {
+    position: relative;
+    left: 46px;
+}
+.titles p {
+    /* width: 90px; */
+    font-size: 9px !important;
+}
+.img-roud[data-v-f32632b7] {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.cards____ .card_prof {
+    width: 100% !important;
+}
+}
 .dowload-img {
   text-align: center;
   margin-top: 20px;
@@ -492,7 +588,9 @@ activeTap: "1",
     width: 95% !important;
     margin: 0 5px;
   }
-
+.imgcost{
+  flex-direction: column;
+}
   .btn {
     padding: 7px !important;
     margin: 0 5px !important;
