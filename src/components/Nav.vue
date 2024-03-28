@@ -30,12 +30,16 @@
           </li>
         </ul>
         <form class="d-flex gap-3 flex-wrap" role="search">
+          <router-link to="/Login">
           <button class="btn btn-outline-success btn px-4 py-2" type="submit">
             sign in
           </button>
+          </router-link>
+          <router-link to="/register">
           <button class="btn btn-outline-success btn px-4 py-2" type="submit">
             sign up
           </button>
+          </router-link>
         </form>
       </div>
     </div>
@@ -78,5 +82,15 @@ export default {
 
 .navbar-nav .nav-link.active {
   color: var(--pink) !important;
+}
+@media (max-width:1024px) {
+  .navbar-nav {
+    font-size: 14px;
+  }
+}
+@media (max-width:11200px) {
+  .navbar-nav {
+    font-size: 14px;
+  }
 }
 </style>

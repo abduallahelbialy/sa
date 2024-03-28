@@ -255,7 +255,7 @@ header .container {
     border: none;
     background: transparent;
     top: 20px;
-    right: 24px;
+    right: 30px;
     color: white;
 }
 .card_back .layer .img_btn:hover{
@@ -265,7 +265,7 @@ header .container {
 .card_back .layer .img_btn img {
     /* background-color: red; */
     position: relative;
-    width: 22px;
+    width: 28px;
 }
 .card_back2 .layer .img_btn {
     position: absolute;
@@ -894,6 +894,17 @@ footer{
     width: 905px;
   }
   .tab form input{
+    border: 1px solid gray;
+    padding: 10px;
+    width: 430px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    margin: 0 10px ;
+}
+  .tab form .inpo{
     border: 1px solid gray;
     padding: 10px;
     width: 430px;
@@ -1920,6 +1931,7 @@ table tr {
     padding: 49px 35px !important;
     height: 95%;
     position: relative;
+    border: 2px solid #fff;
 }
 .cardForm h2{
     margin:20px 0 45px;

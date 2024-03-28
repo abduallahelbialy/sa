@@ -1,101 +1,189 @@
 <template>
-  <main style="margin: 150px 0">
-    <div class="container">
-      <div class="row">
-        <div
-          class="search wow fadeIn p-0 col-lg-6 d-flex justify-content-between align-items-center"
-        >
-          <form action="" class="col-lg-6">
-            <div class="form-group">
-              <input
-                type="search"
-                name=""
-                class="input"
-                placeholder="Looking for your favorite salon"
-              />
-              <button type="submit" class="search_">
-                <img src="../assets/Iconly-Light-Search.svg" alt="" />
-              </button>
-            </div>
-          </form>
-          <div
-            class="buttons d-flex justify-content-center align-item-center gap-3 col-lg-6"
-          >
-            <a
-              href="#"
-              class="tabs_ active_tab"
-              @click="activeTap = '1'"
-              :class="{ active: activeTap === '1' }"
-              >men's saloon</a
-            >
-            <a
-              href="#"
-              class="tabs_"
-              @click="activeTap = '2'"
-              :class="{ actives: activeTap === '2' }"
-              >Women's saloon</a
-            >
-          </div>
-        </div>
-        <section class="sec_content col-lg-12 p-0" v-if="activeTap === '1'">
-          <div class="tabs">
-            <div class="container">
-              <div class="easy d-flex justify-content-left align-items-center">
-                <form action="" class="wow fadeIn">
-                  <div class="form-group">
-                    <label for="">choose your saloon</label><br />
-                    <div class="select">
-                      <select name="" class="select" id="">
-                        <option value="">Jeddah waterfront</option>
-                        <option value="">dah water</option>
-                        <option value="">Jed front</option>
-                      </select>
-                    </div>
+   
+                <div class="content">
+                <div class="one active">
+                  <h2 style="color: #fc40b9">nearest</h2>
+                  <swiper
+                    :style="{
+                      '--swiper-navigation-color': '#fc40b9',
+                      '--swiper-pagination-color': '#fc40b9',
+                    }"
+                    :zoom="true"
+                    :navigation="{
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                    }"
+                    :pagination="{
+                      clickable: true,
+                    }"
+                    :modules="modules"
+                    class="mySwiper"
+                  >
+                    <swiper-slide v-for="sild in silders" :key="sild.id">
+                      <div class="swiper-zoom-container">
+                        <div
+                          class="card_back wow slideInDown"
+                          style="background-image: url('../assets/NoPath.png')"
+                        >
+                          <div class="layer" style="background: linear-gradient(to top, #FD0BB5, transparent, transparent) !important;">
+                            <form action="">
+                              <input type="hidden" value="1" name="status" />
+                              <button type="submit" class="img_btn">
+                                <img src="../assets/he.png" alt="" />
+                              </button>
+                            </form>
+                            <img :src="sild.img" alt="" class="img-silder" />
+
+                            <p>{{ sild.title }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                  </swiper>
+                  <div class="swiper-button-next">
+                    <img src="../assets/Group 39244.png" alt="" />
                   </div>
-                </form>
-                <ul class="tabs">
-                  <li data-num=".one" class="active">
-                    Al Tayebat International City Museum
-                  </li>
-                  <li data-num=".two">Al Shallal Recreational Park</li>
-                  <li data-num=".three">Recreational Park</li>
-                </ul>
-              </div>
-              <Swipe />
-            </div>
-          </div>
-        </section>
-        <section class="sec_content col-lg-12 p-0" v-if="activeTap === '2'">
-          <div class="tabs">
-            <div class="container">
-              <div class="easy d-flex justify-content-left align-items-center">
-                <form action="" class="wow fadeIn">
-                  <div class="form-group">
-                    <label for="">choose your saloon</label><br />
-                    <div class="select">
-                      <select name="" class="select" id="">
-                        <option value="">Jeddah waterfront</option>
-                        <option value="">dah water</option>
-                        <option value="">Jed front</option>
-                      </select>
-                    </div>
+                  <div class="swiper-button-prev">
+                    <img src="../assets/Group 39245.png" alt="" />
                   </div>
-                </form>
-                <ul class="tabs">
-                  <li data-num=".one" class="activea">
-                    Al Tayebat International City Museum
-                  </li>
-                  <li data-num=".two">Al Shallal Recreational Park</li>
-                  <li data-num=".three">Recreational Park</li>
-                </ul>
+
+                  <h2 style="color: #fc40b9">most crowded tabor</h2>
+                  <swiper
+                    :style="{
+                      '--swiper-navigation-color': '#fc40b9',
+                      '--swiper-pagination-color': '#fc40b9',
+                    }"
+                    :zoom="true"
+                    :navigation="{
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                    }"
+                    :pagination="{
+                      clickable: true,
+                    }"
+                    :modules="modules"
+                    class="mySwiper"
+                  >
+                    <swiper-slide v-for="sild in sildersTwo" :key="sild.id">
+                      <div class="swiper-zoom-container">
+                        <div
+                          class="card_back wow slideInDown"
+                          style="background-image: url('../assets/NoPath.png')"
+                        >
+                          <div class="layer" style="background: linear-gradient(to top, #FD0BB5, transparent, transparent) !important;">
+                            <form action="">
+                              <input type="hidden" value="1" name="status" />
+                              <button type="submit" class="img_btn">
+                                <img src="../assets/he.png" alt="" />
+                              </button>
+                            </form>
+                            <img :src="sild.img" alt="" class="img-silder" />
+
+                            <p>{{ sild.title }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                  </swiper>
+                  <div class="swiper-button-next">
+                    <img src="../assets/Group 39244.png" alt="" />
+                  </div>
+                  <div class="swiper-button-prev">
+                    <img src="../assets/Group 39245.png" alt="" />
+                  </div>
+
+                  <h2 style="color: #fc40b9">tabor for you</h2>
+                  <swiper
+                    :style="{
+                      '--swiper-navigation-color': '#fc40b9',
+                      '--swiper-pagination-color': '#fc40b9',
+                    }"
+                    :zoom="true"
+                    :navigation="{
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                    }"
+                    :pagination="{
+                      clickable: true,
+                    }"
+                    :modules="modules"
+                    class="mySwiper"
+                  >
+                    <swiper-slide v-for="sild in silders" :key="sild.id">
+                      <div class="swiper-zoom-container">
+                        <div
+                          class="card_back wow slideInDown"
+                          style="background-image: url('../assets/NoPath.png')"
+                        >
+                          <div class="layer" style="background: linear-gradient(to top, #FD0BB5, transparent, transparent) !important;">
+                            <form action="">
+                              <input type="hidden" value="1" name="status" />
+                              <button type="submit" class="img_btn">
+                                <img src="../assets/he.png" alt="" />
+                              </button>
+                            </form>
+                            <img :src="sild.img" alt="" class="img-silder" />
+
+                            <p>{{ sild.title }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                  </swiper>
+                  <div class="swiper-button-next">
+                    <img src="../assets/Group 39244.png" alt="" />
+                  </div>
+                  <div class="swiper-button-prev">
+                    <img src="../assets/Group 39245.png" alt="" />
+                  </div>
+
+                  <h2 style="color: #fc40b9">new service provider</h2>
+                  <swiper
+                    :style="{
+                      '--swiper-navigation-color': '#fc40b9',
+                      '--swiper-pagination-color': '#fc40b9',
+                    }"
+                    :zoom="true"
+                    :navigation="{
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                    }"
+                    :pagination="{
+                      clickable: true,
+                    }"
+                    :modules="modules"
+                    class="mySwiper"
+                  >
+                    <swiper-slide v-for="sild in silders" :key="sild.id">
+                      <div class="swiper-zoom-container">
+                        <div
+                          class="card_back wow slideInDown"
+                          style="background-image: url('../assets/NoPath.png')"
+                        >
+                          <div class="layer" style="background: linear-gradient(to top, #FD0BB5, transparent, transparent) !important;">
+                            <form action="">
+                              <input type="hidden" value="1" name="status" />
+                              <button type="submit" class="img_btn">
+                                <img src="../assets/he.png" alt="" />
+                              </button>
+                            </form>
+                            <img :src="sild.img" alt="" class="img-silder" />
+
+                            <p>{{ sild.title }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </swiper-slide>
+                  </swiper>
+                  <div class="swiper-button-next">
+                    <img src="../assets/Group 39244.png" alt="" />
+                  </div>
+                  <div class="swiper-button-prev">
+                    <img src="../assets/Group 39245.png" alt="" />
+                  </div>
+                </div>
+                
               </div>
-              <Swipetwo />
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </main>
 </template>
 
 <script>
@@ -103,33 +191,17 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/zoom";
 import slide from "../assets/NoPath.png";
-import Swipe from "../layout/Swipe.vue";
-import Swipetwo from "../layout/Swipetwo.vue";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Zoom, Navigation, Pagination } from "swiper/modules";
-import {
-  setupListClick,
-  setupLabelClick,
-  setupSwipers,
-  setupWOW,
-} from "../components/jsvue/serve";
-
-$(document).ready(function () {
-  setupListClick();
-  setupLabelClick();
-  setupSwipers();
-  setupWOW();
-});
 export default {
-  name: "service",
-  components: {
+name:"Swipe",
+ components: {
     Swiper,
     SwiperSlide,
-    Swipe,
-    Swipetwo,
+    
   },
-  data() {
+    data() {
     return {
       activeTap: "1",
 
@@ -162,18 +234,18 @@ export default {
       modules: [Zoom, Navigation, Pagination],
     };
   },
-};
+}
 </script>
 
 <style scoped>
-.activea {
-  color: #fc40b9;
-  text-decoration: underline;
+.activea{
+    color:#fc40b9;
+    text-decoration:underline;
 }
-.actives {
-  background-color: #fc40b9;
-  color: #fff !important;
-  border: none;
+.actives{
+    background-color:#fc40b9;
+    color:#fff !important;
+    border:none;
 }
 @media (max-width: 477px) {
   .swiper-button-next,
