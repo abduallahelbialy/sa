@@ -34,7 +34,9 @@
                             </form>
                             <img :src="sild.img" alt="" class="img-silder" />
 
+                              <router-link to="/Add">
                             <p>{{ sild.title }}</p>
+                                </router-link>
                           </div>
                         </div>
                       </div>
@@ -79,7 +81,9 @@
                             </form>
                             <img :src="sild.img" alt="" class="img-silder" />
 
+                              <router-link to="/Add">
                             <p>{{ sild.title }}</p>
+                                </router-link>
                           </div>
                         </div>
                       </div>
@@ -124,7 +128,9 @@
                             </form>
                             <img :src="sild.img" alt="" class="img-silder" />
 
+                              <router-link to="/Add">
                             <p>{{ sild.title }}</p>
+                                </router-link>
                           </div>
                         </div>
                       </div>
@@ -169,7 +175,9 @@
                             </form>
                             <img :src="sild.img" alt="" class="img-silder" />
 
+                              <router-link to="/Add">
                             <p>{{ sild.title }}</p>
+                                </router-link>
                           </div>
                         </div>
                       </div>

@@ -6,6 +6,7 @@ import Login from "../views/Login.vue";
 import Forget from '../views/Forget.vue';
 import register from "../views/Register.vue";
 import profile from "../views/Profile.vue";
+import Add from "../views/Addprofile.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -43,6 +44,11 @@ const router = createRouter({
       path: "/profile",
       name: "profile",
       component: profile,
+    },
+    {
+      path: "/Add",
+      name: "Add",
+      component: Add,
     },
     // {
     //   path: "/about",

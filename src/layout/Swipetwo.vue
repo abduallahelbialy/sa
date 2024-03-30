@@ -21,6 +21,7 @@
                   >
                     <swiper-slide v-for="sild in silders" :key="sild.id">
                       <div class="swiper-zoom-container">
+                        
                         <div
                           class="card_back wow slideInDown"
                           style="background-image: url('../assets/NoPath.png')"
@@ -33,8 +34,10 @@
                               </button>
                             </form>
                             <img :src="sild.img" alt="" class="img-silder" />
-
+                                <router-link to="/Add">
                             <p>{{ sild.title }}</p>
+                                </router-link>
+
                           </div>
                         </div>
                       </div>
@@ -79,7 +82,9 @@
                             </form>
                             <img :src="sild.img" alt="" class="img-silder" />
 
+                              <router-link to="/Add">
                             <p>{{ sild.title }}</p>
+                                </router-link>
                           </div>
                         </div>
                       </div>
@@ -124,7 +129,9 @@
                             </form>
                             <img :src="sild.img" alt="" class="img-silder" />
 
+                              <router-link to="/Add">
                             <p>{{ sild.title }}</p>
+                                </router-link>
                           </div>
                         </div>
                       </div>
@@ -169,7 +176,9 @@
                             </form>
                             <img :src="sild.img" alt="" class="img-silder" />
 
+                              <router-link to="/Add">
                             <p>{{ sild.title }}</p>
+                                </router-link>
                           </div>
                         </div>
                       </div>

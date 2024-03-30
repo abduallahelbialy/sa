@@ -38,12 +38,12 @@
                       <label for="">Mobile phone</label><br />
                       <div class="d-flex zeft">
                         <span class="ml-2 mr-1">+966</span>
-                        <input class="inpo" type="number" name="" id="low" />
+                        <input class="inpo" type="number" name="" id="low" required />
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="">country</label><br />
-                      <select name="" id="khara" class="khara_" required>
+                      <select name="" id="khara" class="khara_" >
                         <option value="">palestine</option>
                         <option value="">eygpt</option>
                         <option value="">usa</option>
@@ -53,11 +53,11 @@
                   <div class="d-flex w-100 kha_">
                     <div class="form-group">
                       <label for="">date of birth</label><br />
-                      <input type="date" name="" id="date" class="jj_data" required />
+                      <input type="date" name="" id="date" class="jj_data"  />
                     </div>
                     <div class="form-group">
                       <label for="">region city</label><br />
-                      <select name="" id="khara" class="khara_" required>
+                      <select name="" id="khara" class="khara_" >
                         <option value="">gaza</option>
                         <option value="">mansoura</option>
                         <option value="">quds</option>
