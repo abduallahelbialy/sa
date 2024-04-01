@@ -1,158 +1,32 @@
 <template>
- <Modals/>
+  <Modals />
   <main>
     <div class="container">
       <div class="row">
         <section class="sec1-profile col-lg-11 m-auto">
           <div class="parent">
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
+            <swiper  :navigation="{
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                    }"
+                     :modules="modules" class="mySwiper">
+              <swiper-slide v-for="Slide in Slides" :key="Slide.id">
+                <div class="layer_img_silde_swiper">
+                  <h2>Abduallah Bialy</h2>
+                  <div
+                    class="location d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="../assets/svgexport-6 (17).png"
+                      style="width: 20px; height: 20px"
+                      alt=""
+                    />
+                    <p class="m-0 ml-2">Jeddah Street</p>
                   </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
                 </div>
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
-                  </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
-                  </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
-                  </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
-                  </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
-                  </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
-                  </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
-                  </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
-                </div>
-                <div class="swiper-slide">
-                  <div class="layer_img_silde_swiper">
-                    <h2>Ahmed Saloon</h2>
-                    <div
-                      class="location d-flex align-items-center justify-content-center"
-                    >
-                      <img
-                        src="../assets/svgexport-6 (17).png"
-                        style="width: 20px; height: 20px"
-                        alt=""
-                      />
-                      <p class="m-0 ml-2">Jeddah Street</p>
-                    </div>
-                  </div>
-                  <img src="../assets/NoPath - Copy (18).png" alt="" />
-                </div>
-              </div>
-            </div>
+                <img src="../assets/NoPath - Copy (18).png" alt="" />
+              </swiper-slide>
+            </swiper>
             <div
               class="d-flex justify-content-between"
               style="position: relative; bottom: 217px"
@@ -164,16 +38,18 @@
                 <img src="../assets/Group 39245.png" alt="" />
               </div>
             </div>
-          </div>
-          <div class="profile_img">
-            <img src="../assets/NoPath - Copy (16).png" alt="" />
+            <div class="profile_img">
+              <img src="../assets/WhatsApp Image 2023-11-21 at 10.32.29 AM.jpeg" alt="" />
+            </div>
           </div>
         </section>
         <section class="sec2-profile">
           <div class="tabs mb-5">
-            <input type="radio" name="tabs" id="tabone" checked="checked"  />
-            <label for="tabone" id="label" class="mb-2" >Al Shallal Recreational Park</label>
-            <div class="tab my-4 ">
+            <input type="radio" name="tabs" id="tabone" checked="checked" />
+            <label for="tabone" id="label" class="mb-2"
+              >Al Shallal Recreational Park</label
+            >
+            <div class="tab my-4">
               <div class="container">
                 <div
                   class="input_bedon_lazma d-flex justify-content-center col-lg-12 my-5"
@@ -184,7 +60,11 @@
                   </button>
                 </div>
                 <div class="cards_profile d-flex justify-content-between">
-                  <div class="card_prof" v-for="profl in profiles" :key="profl.id">
+                  <div
+                    class="card_prof"
+                    v-for="profl in profiles"
+                    :key="profl.id"
+                  >
                     <div class="img__">
                       <div class="layer_card_img_prof"></div>
                       <img src="../assets/NoPath - Copy (16).png" alt="" />
@@ -208,7 +88,11 @@
                       </p>
                     </button>
                   </div>
-                  <div class="card_prof" v-for="wating in watings" :key="wating.id">
+                  <div
+                    class="card_prof"
+                    v-for="wating in watings"
+                    :key="wating.id"
+                  >
                     <div class="img__">
                       <div class="layer_card_img_prof"></div>
                       <img src="../assets/NoPath - Copy (16).png" alt="" />
@@ -222,70 +106,83 @@
                         waiting list
                       </p>
                     </div>
-                    <button class="send_card text-white" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                      <p class="mb-2"  
-                        >Send an alert</p>
-                      <p class="m-0" id="title_bottom_button">
-                        You will be notifyed when your appointment comes up
-                      </p>
-                    </button>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            <input type="radio" name="tabs" id="tabtwo" />
-            <label for="tabtwo" id="label" class="mb-2">Al Shallal Recreational Park</label>
-            <div class="tab my-4">
-              <div class="container">
-               <div class="cards_profile d-flex justify-content-between">
-                  <div class="card_prof" v-for="profl in profiles" :key="profl.id">
-                    <div class="img__">
-                      <div class="layer_card_img_prof"></div>
-                      <img src="../assets/NoPath - Copy (16).png" alt="" />
-                    </div>
-                    <div class="data_card">
-                      <h4 style="color: #cf3645" class="mb-4">
-                        barber not available
-                      </h4>
-                      <p class="text-secondary">
-                        Your reservation cannot be accepted because the barber
-                        is not available
-                      </p>
-                    </div>
-                    <button class="send_card text-white">
-                      <p
-                        class="m-0"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
-                      >
-                        notify me if the barber back to work
-                      </p>
-                    </button>
-                  </div>
-                  <div class="card_prof" v-for="wating in watings" :key="wating.id">
-                    <div class="img__">
-                      <div class="layer_card_img_prof"></div>
-                      <img src="../assets/NoPath - Copy (16).png" alt="" />
-                    </div>
-                    <div class="data_card">
-                      <h4 style="color: #46ce37" class="mb-4">
-                        barber is not available
-                      </h4>
-                      <h3>22</h3>
-                      <p class="text-secondary" style="font-size: 14px">
-                        waiting list
-                      </p>
-                    </div>
-                    <button class="send_card text-white">
+                    <button
+                      class="send_card text-white"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
                       <p class="mb-2">Send an alert</p>
                       <p class="m-0" id="title_bottom_button">
                         You will be notifyed when your appointment comes up
                       </p>
                     </button>
                   </div>
+                </div>
+              </div>
+            </div>
+            <input type="radio" name="tabs" id="tabtwo" />
+            <label for="tabtwo" id="label" class="mb-2"
+              >Al Shallal Recreational Park</label
+            >
+            <div class="tab my-4">
+              <div class="container">
+                <div class="cards_profile d-flex justify-content-between">
+                  <div
+                    class="card_prof"
+                    v-for="profl in profiles"
+                    :key="profl.id"
+                  >
+                    <div class="img__">
+                      <div class="layer_card_img_prof"></div>
+                      <img src="../assets/NoPath - Copy (16).png" alt="" />
+                    </div>
+                    <div class="data_card">
+                      <h4 style="color: #cf3645" class="mb-4">
+                        barber not available
+                      </h4>
+                      <p class="text-secondary">
+                        Your reservation cannot be accepted because the barber
+                        is not available
+                      </p>
+                    </div>
+                    <button class="send_card text-white">
+                      <p
+                        class="m-0"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        notify me if the barber back to work
+                      </p>
+                    </button>
                   </div>
+                  <div
+                    class="card_prof"
+                    v-for="wating in watings"
+                    :key="wating.id"
+                  >
+                    <div class="img__">
+                      <div class="layer_card_img_prof"></div>
+                      <img src="../assets/NoPath - Copy (16).png" alt="" />
+                    </div>
+                    <div class="data_card">
+                      <h4 style="color: #46ce37" class="mb-4">
+                        barber is not available
+                      </h4>
+                      <h3>22</h3>
+                      <p class="text-secondary" style="font-size: 14px">
+                        waiting list
+                      </p>
+                    </div>
+                    <button class="send_card text-white" 
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
+                      <p class="mb-2">Send an alert</p>
+                      <p class="m-0" id="title_bottom_button">
+                        You will be notifyed when your appointment comes up
+                      </p>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <input type="radio" name="tabs" id="tabthree" />
@@ -295,7 +192,11 @@
             <div class="tab my-4">
               <div class="container">
                 <div class="cards_profile d-flex justify-content-between">
-                  <div class="card_prof" v-for="profl in profiles" :key="profl.id">
+                  <div
+                    class="card_prof"
+                    v-for="profl in profiles"
+                    :key="profl.id"
+                  >
                     <div class="img__">
                       <div class="layer_card_img_prof"></div>
                       <img src="../assets/NoPath - Copy (16).png" alt="" />
@@ -319,7 +220,11 @@
                       </p>
                     </button>
                   </div>
-                  <div class="card_prof" v-for="wating in watings" :key="wating.id">
+                  <div
+                    class="card_prof"
+                    v-for="wating in watings"
+                    :key="wating.id"
+                  >
                     <div class="img__">
                       <div class="layer_card_img_prof"></div>
                       <img src="../assets/NoPath - Copy (16).png" alt="" />
@@ -333,22 +238,27 @@
                         waiting list
                       </p>
                     </div>
-                    <button class="send_card text-white">
+                    <button class="send_card text-white"  data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
                       <p class="mb-2">Send an alert</p>
                       <p class="m-0" id="title_bottom_button">
                         You will be notifyed when your appointment comes up
                       </p>
                     </button>
                   </div>
-                  </div>
+                </div>
               </div>
             </div>
             <input type="radio" name="tabs" id="tabfour" />
             <label for="tabfour" id="label">Al Shallal Recreational Park</label>
             <div class="tab my-4">
               <div class="container">
-                 <div class="cards_profile d-flex justify-content-between">
-                  <div class="card_prof" v-for="profl in profiles" :key="profl.id">
+                <div class="cards_profile d-flex justify-content-between">
+                  <div
+                    class="card_prof"
+                    v-for="profl in profiles"
+                    :key="profl.id"
+                  >
                     <div class="img__">
                       <div class="layer_card_img_prof"></div>
                       <img src="../assets/NoPath - Copy (16).png" alt="" />
@@ -372,7 +282,11 @@
                       </p>
                     </button>
                   </div>
-                  <div class="card_prof" v-for="wating in watings" :key="wating.id">
+                  <div
+                    class="card_prof"
+                    v-for="wating in watings"
+                    :key="wating.id"
+                  >
                     <div class="img__">
                       <div class="layer_card_img_prof"></div>
                       <img src="../assets/NoPath - Copy (16).png" alt="" />
@@ -386,14 +300,15 @@
                         waiting list
                       </p>
                     </div>
-                    <button class="send_card text-white">
+                    <button class="send_card text-white"  data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
                       <p class="mb-2">Send an alert</p>
                       <p class="m-0" id="title_bottom_button">
                         You will be notifyed when your appointment comes up
                       </p>
                     </button>
                   </div>
-                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -424,7 +339,7 @@ import {
   setupLabelClick,
   setupWOW,
 } from "../components/jsvue/add";
-import Modals from '../layout/Modals.vue'
+import Modals from "../layout/Modals.vue";
 $(document).ready(function () {
   hideListPopup();
   setupSwiper();
@@ -432,38 +347,54 @@ $(document).ready(function () {
   setupLabelClick();
   setupWOW();
 });
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide, } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
 
 export default {
   name: "Add",
   data() {
     return {
       hide: false,
-      cardmodal: [{ id: 1 }, { id: 2 }, {id:3},],
-      profiles:[{ id: 1 }, { id:2}, ],
-      watings:[{ id: 1 }, { id:2}, ]
+            modules: [Navigation],
+
+      cardmodal: [{ id: 1 }, { id: 2 }, { id: 3 }],
+      profiles: [{ id: 1 }, { id: 2 }],
+      watings: [{ id: 1 }, { id: 2 }],
+      Slides:[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
     };
   },
-  components:{Modals},
+  components: { Modals, Swiper, SwiperSlide },
   methods: {
     show() {
       this.hide = true;
     },
+  },
+
+  setup() {
+    return {
+      modules: [Navigation],
+    };
   },
 };
 </script>
 
 <style scoped>
 .modal-footerr {
-    display: flex;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 5px;
-    justify-content: flex-start;
-    padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * .5);
-    background-color: var(--bs-modal-footer-bg);
-    border-bottom-right-radius: var(--bs-modal-inner-border-radius);
-    border-bottom-left-radius: var(--bs-modal-inner-border-radius);
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  justify-content: flex-start;
+  padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap) * 0.5);
+  background-color: var(--bs-modal-footer-bg);
+  border-bottom-right-radius: var(--bs-modal-inner-border-radius);
+  border-bottom-left-radius: var(--bs-modal-inner-border-radius);
 }
 .modal-contentt {
   position: relative;
@@ -491,57 +422,58 @@ export default {
   width: 70%;
   margin: auto;
 }
-@media (max-width:477px) {
-  .modal-contentr,.modal-contentrr{
+@media (max-width: 477px) {
+  .modal-contentr,
+  .modal-contentrr {
     width: 349px !important;
   }
   .form-group label {
     color: black !important;
     font-size: 10px;
-}
-form .form-group[data-v-868f7181] {
+  }
+  form .form-group[data-v-868f7181] {
     position: relative;
     width: fit-content;
     width: 90%;
     display: flex;
     flex-wrap: wrap;
-}
-.select_input__[data-v-868f7181] {
+  }
+  .select_input__[data-v-868f7181] {
     width: 100% !important;
     padding: 10px;
     border: 1px solid gray;
     border-radius: 2px;
-}
-.modal-content[data-v-868f7181] {
+  }
+  .modal-content[data-v-868f7181] {
     width: 87%;
     margin: auto;
-}
+  }
 }
 .modal-contentr {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-    color: var(--bs-modal-color);
-    pointer-events: auto;
-    background-color: var(--bs-modal-bg);
-    background-clip: padding-box;
-    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-    border-radius: var(--bs-modal-border-radius);
-    outline: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-color: var(--bs-modal-bg);
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
 }
 .modal-contentrr {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-    color: var(--bs-modal-color);
-    pointer-events: auto;
-    background-color: var(--bs-modal-bg);
-    background-clip: padding-box;
-    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-    border-radius: var(--bs-modal-border-radius);
-    outline: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-color: var(--bs-modal-bg);
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
 }
 .card-modal {
   padding: 15px;

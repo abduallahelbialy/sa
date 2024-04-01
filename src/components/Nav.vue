@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3 p-4 position-relative z-3">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3 p-4 position-relative z-3" :style="{display:  currentPath ==='/homecontrol' || currentPath ==='/test'? 'none':'',}">
     <div class="container">
       <router-link class="navbar-brand" to="/">
         <div style="width: 50%">

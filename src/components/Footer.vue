@@ -1,7 +1,7 @@
 <template>
-   <footer>
+   <footer :style="{display:  currentPath === '/homecontrol' || currentPath ==='/test'? 'none':'',}" >
         <div class="container">
-            <div class="d-flex col-lg-12 border-bottom">
+            <div class="d-flex col-lg-12 border-bottom" >
                 <div class="col-lg-4 d-flex justify-content-start f_logo align-items-start">
                     <img src="../assets/12345671.png" alt="">
                 </div>
@@ -33,7 +33,13 @@
 
 <script>
 export default {
-name:"footer"
+name:"footer",
+data (){
+    return{
+              currentPath: window.location.pathname,
+
+    }
+}
 }
 </script>
 

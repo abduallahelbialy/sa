@@ -1469,6 +1469,7 @@ input:checked+.switch:active::before {
 .border-pink {
     padding: 10px 40px;
     border-radius: 7px;
+    margin-left: 10px;
     background: white;
     border: 2px solid #F310BA;
     color: #F310BA;
@@ -1544,7 +1545,7 @@ input:checked+.switch:active::before {
     border: none;
 }
 .content-body {
-    border-bottom: 10px solid white;
+    /* border-bottom: 10px solid white; */
     height: fit-content;
     position: relative;
 }
@@ -1655,6 +1656,7 @@ table tr {
 .content-sidepar a .para p {
     color: black;
     transition: .5s;
+    margin-left: 10px;
     text-decoration: none;
 }
 
@@ -1879,6 +1881,7 @@ table tr {
     background: white;
     border-radius: 7px;
     border: none;
+    margin: 10px;
     padding: 5px 20px;
 }
 .confim_btn2 {
@@ -1886,6 +1889,7 @@ table tr {
     color: white;
     border-radius: 7px;
     border: none;
+    margin: 10px;
     padding: 5px 20px;
 }
 
