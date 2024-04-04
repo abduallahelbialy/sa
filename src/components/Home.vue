@@ -49,7 +49,7 @@
         </div>
       </section>
       <section
-        class="sec2 col-lg-12 d-flex justify-content-between align-items-center"
+        class="sec2 col-lg-12 d-flex justify-content-between align-items-center" id="about"
       >
         <div class="col-lg-6 left-sec2 wow bounceIn"></div>
         <div class="col-lg-5 right-sec2 wow bounceInRight">

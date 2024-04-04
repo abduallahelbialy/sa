@@ -9,6 +9,7 @@ import profile from "../views/Profile.vue";
 import Add from "../views/Addprofile.vue";
 import Homecontrol from "../layout/Homecontrol.vue";
 import Test from "../layout/Test.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -63,6 +64,9 @@ const router = createRouter({
       name: "test",
       component: Test,
     },
+
+  
+
     // {
     //   path: "/about",
     //   name: "about",

@@ -1,7 +1,7 @@
 <template>
     <section
         class="sec5 wow rotateInUpLeft col-lg-12 d-flex align-items-center justify-content-between"
-      >
+      id="contact" >
         <div class="col-lg-4 left-sec5 wow bounceIn">
           <p>Are you a business owner ! join us</p>
         </div>

@@ -218,18 +218,10 @@
             <p>Home</p>
           </div>
         </router-link>
+     
         <router-link
-          to="/test"
-          class="my-4 customer d-flex justify-content-left align-items-center"
-        >
-          <img src="../assets/mor.png" alt="" />
-          <div class="para ml-2">
-            <p>Operations</p>
-          </div>
-        </router-link>
-        <router-link
-          to="/hh"
-          class="my-4 customer d-flex justify-content-left align-items-center"
+ to="/test"
+           class="my-4 customer d-flex justify-content-left align-items-center"
         >
           <i class="fas fa-sliders-h"></i>
           <div class="para ml-2">
@@ -288,17 +280,9 @@
               <p>Home</p>
             </div>
           </router-link>
+        
           <router-link
             to="/test"
-            class="my-4 customer d-flex justify-content-left align-items-center"
-          >
-            <img src="../assets/mor.png" alt="" />
-            <div class="para ml-2">
-              <p>Operations</p>
-            </div>
-          </router-link>
-          <router-link
-            to="#"
             class="my-4 customer d-flex justify-content-left align-items-center"
           >
             <i class="fas fa-sliders-h"></i>

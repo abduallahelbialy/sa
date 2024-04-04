@@ -18,17 +18,26 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-          <li class="nav-item" v-for="link in links" :key="link.id">
-            <router-link
-              :class="{ 'nav-link': true, active: currentPath === link.path }"
-              :to="link.path"
-              exact
-            >
-              {{ link.name }}
-            </router-link>
-          </li>
-        </ul>
+         <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="/" :class="{ active: activeTab === 'home' }" @click="setActiveTab('home')">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#sec3" :class="{ active: activeTab === 'service' }" @click="setActiveTab('service')">Service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about" :class="{ active: activeTab === 'about' }" @click="setActiveTab('about')">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact" :class="{ active: activeTab === 'contact' }" @click="setActiveTab('contact')">Contact with Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#foot" :class="{ active: activeTab === 'find' }" @click="setActiveTab('find')">Find Your Place</a>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" :to="{ path: '/profile' }" :class="{ active: activeTab === 'profile' }" @click="setActiveTab('profile')">Profile</router-link>
+      </li>
+    </ul>
         <form class="d-flex gap-3 flex-wrap" role="search">
           <router-link to="/Login">
           <button class="btn btn-outline-success btn px-4 py-2" type="submit">
@@ -51,15 +60,23 @@ export default {
   name: "nav",
   data() {
     return {
+            activeTab: '',
+
       links: [
         { id: 1, name: "Home", path: "/" },
-        { id: 2, name: "Service", path: "/service" },
+        { id: 2, name: "Service",  id:"sec3" },
         { id: 3, name: "About Us", path: "/about" },
         { id: 4, name: "Connect with Us", path: "/contact" },
         { id: 5, name: "Find Your Place", path: "/find" },
         { id: 6, name: "Profile", path: "/profile" },
       ],
     };
+    
+  },
+   methods: {
+    setActiveTab(tab) {
+      this.activeTab = tab;
+    }
   },
   computed: {
     currentPath() {

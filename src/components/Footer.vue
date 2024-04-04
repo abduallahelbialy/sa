@@ -1,5 +1,5 @@
 <template>
-   <footer :style="{display:  currentPath === '/homecontrol' || currentPath ==='/test'? 'none':'',}" >
+   <footer :style="{display:  currentPath === '/homecontrol' || currentPath ==='/test'? 'none':'',}" id="foot">
         <div class="container">
             <div class="d-flex col-lg-12 border-bottom" >
                 <div class="col-lg-4 d-flex justify-content-start f_logo align-items-start">
