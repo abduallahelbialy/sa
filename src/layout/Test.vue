@@ -1,7 +1,4 @@
 <template>
-  <!-- <div class="loading">
-    <img class="wow hinge" src="../assets/1234567.png" alt="" />
-  </div> -->
   <div class="popup3" v-if="closePopup">
     <div class="card_pop">
       <div class="close text-left">
@@ -45,652 +42,388 @@
   </div>
   <div class="container">
     <div class="wrapper">
-        <div class="steps">
-          <ul>
-            <li :class="{ 'is-active': currentStep === 1 }">
-              contact information
-            </li>
-            <li :class="{ 'is-active': currentStep === 2 }">
-              service provider information
-            </li>
-            <li :class="{ 'is-active': currentStep === 3 }">working hours</li>
-            <li :class="{ 'is-active': currentStep === 4 }">upload images</li>
-            <li :class="{ 'is-active': currentStep === 5 }">service list</li>
-            <li :class="{ 'is-active': currentStep === 6 }">staff info</li>
-            <li :class="{ 'is-active': currentStep === 7 }">time policy</li>
-            <li :class="{ 'is-active': currentStep === 8 }">payment policy</li>
-            <li :class="{ 'is-active': currentStep === 9 }">
-              cancelation refund policy
-            </li>
-            <li :class="{ 'is-active': currentStep === 10 }">
-              adding another branch
-            </li>
-          </ul>
-        </div>
+      <div class="steps">
+        <ul>
+          <li :class="{ 'is-active': currentStep === 1 }">
+            contact information
+          </li>
+          <li :class="{ 'is-active': currentStep === 2 }">
+            service provider information
+          </li>
+          <li :class="{ 'is-active': currentStep === 3 }">working hours</li>
+          <li :class="{ 'is-active': currentStep === 4 }">upload images</li>
+          <li :class="{ 'is-active': currentStep === 5 }">service list</li>
+          <li :class="{ 'is-active': currentStep === 6 }">staff info</li>
+          <li :class="{ 'is-active': currentStep === 7 }">time policy</li>
+          <li :class="{ 'is-active': currentStep === 8 }">payment policy</li>
+          <li :class="{ 'is-active': currentStep === 9 }">
+            cancelation refund policy
+          </li>
+          <li :class="{ 'is-active': currentStep === 10 }">
+            adding another branch
+          </li>
+        </ul>
+      </div>
 
-        <form class="form-wrapper">
-          <fieldset
-            class="section fieldset is-active mt-5"
-            v-if="currentStep === 1"
-          >
-            <h3>Your Details</h3>
-            <input type="text" name="name" id="name" placeholder="yor name" />
-            <input type="text" name="email" id="email" placeholder="Email" />
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="who are you representing"
-            />
-            <input
-              type="number"
-              name="email"
-              id="email"
-              placeholder="phone number"
-            />
-            <input
-              type="number"
-              name="email"
-              id="email"
-              placeholder="another phone number"
-            />
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n2 my-2" @click="nextStep">Next</div>
-              <button class="button border-0">save</button>
-            </div>
-          </fieldset>
-          <!-- أضف باقي الستيبس هنا -->
-          <fieldset
-            class="section fieldset is-active mt-5 col-lg-12"
-            v-if="currentStep === 2"
-          >
-            <h3>Your Details</h3>
-            <div class="d-flex cvcvc">
-              <div class="col-lg-6">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Service Provider Name that will appered to customer"
-                />
-                <input
-                  type="text"
-                  name="email"
-                  id="email"
-                  placeholder="Company Name"
-                />
-                <select name="category" id="msms">
-                  <option value="">resturant</option>
-                  <option value="">spa</option>
-                  <option value="">women' Salons</option>
-                  <option value="">men' Salons</option>
-                  <option value="">other</option>
-                </select>
-                <div
-                  class="d-flex justify-content-between align-items-center size_w"
-                >
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    placeholder="cr number"
-                  />
-                  <label
-                    for="e1"
-                    class="text-left pl-2 d-flex align-items-center justify-content-center"
-                    style="padding: 0 !important"
-                  >
-                    <p
-                      class="m-0 text-secondary"
-                      style="font-size: 11px; width: fit-content"
-                    >
-                      <i class="fas fa-camera"></i>
-                    </p>
-                    <input
-                      type="file"
-                      name="email"
-                      id="e1"
-                      placeholder=""
-                      class="d-none"
-                    />
-                  </label>
-                </div>
-                <div
-                  class="d-flex justify-content-between align-items-center size_w"
-                >
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    placeholder="tax number"
-                  />
-                  <label
-                    for="e1"
-                    class="text-left pl-2 d-flex align-items-center justify-content-center"
-                    style="padding: 0 !important"
-                  >
-                    <p
-                      class="m-0 text-secondary"
-                      style="font-size: 11px; width: fit-content"
-                    >
-                      <i class="fas fa-camera"></i>
-                    </p>
-                    <input
-                      type="file"
-                      name="email"
-                      id="e1"
-                      placeholder=""
-                      class="d-none"
-                    />
-                  </label>
-                </div>
-                <div
-                  class="d-flex justify-content-between align-items-center size_w"
-                >
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    placeholder="wasel mail number"
-                  />
-                  <label
-                    for="e1"
-                    class="text-left pl-2 d-flex align-items-center justify-content-center"
-                    style="padding: 0 !important"
-                  >
-                    <p
-                      class="m-0 text-secondary"
-                      style="font-size: 11px; width: fit-content"
-                    >
-                      <i class="fas fa-camera"></i>
-                    </p>
-                    <input
-                      type="file"
-                      name="email"
-                      id="e1"
-                      placeholder=""
-                      class="d-none"
-                    />
-                  </label>
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    placeholder="attachment of signed tabor contract"
-                  />
-                  <label
-                    for="e1"
-                    class="text-left pl-2 d-flex align-items-center justify-content-center"
-                    style="padding: 0 !important"
-                  >
-                    <p
-                      class="m-0 text-secondary"
-                      style="font-size: 11px; width: fit-content"
-                    >
-                      <i class="fas fa-camera"></i>
-                    </p>
-                    <input
-                      type="file"
-                      name="email"
-                      id="e1"
-                      placeholder=""
-                      class="d-none"
-                    />
-                  </label>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <select name="country" id="msms">
-                  <option value="" disabled>country</option>
-                  <option value="">palestine</option>
-                  <option value="">eygpt</option>
-                  <option value="">sudan</option>
-                  <option value="">usa</option>
-                  <option value="">other</option>
-                </select>
-                <select name="city" id="msms">
-                  <option value="" disabled>city</option>
-                  <option value="">gaza</option>
-                  <option value="">hebron</option>
-                  <option value="">jerusalem</option>
-                  <option value="">london</option>
-                  <option value="">other</option>
-                </select>
-                <div class="d-flex justify-content-between align-items-center">
-                  <input
-                    type="text"
-                    name="email"
-                    id="email"
-                    placeholder="attachment of signed tabor contract"
-                  />
-                  <label
-                    for="e1"
-                    class="text-left pl-2 d-flex align-items-center justify-content-center"
-                    style="padding: 0 !important"
-                  >
-                    <p
-                      class="m-0 text-secondary"
-                      style="font-size: 11px; width: fit-content"
-                    >
-                      <i class="fas fa-camera"></i>
-                    </p>
-                    <input
-                      type="file"
-                      name="email"
-                      id="e1"
-                      placeholder=""
-                      class="d-none"
-                    />
-                  </label>
-                </div>
-                <input
-                  type="text"
-                  name="google"
-                  id="email"
-                  placeholder="google location"
-                />
-              </div>
-            </div>
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n2 my-2" @click="nextStep">Next</div>
-              <button class="button border-0 mb-2">save</button>
-              <button class="button_preve" @click="previousStep">
-                Previous
-              </button>
-            </div>
-          </fieldset>
+      <form class="form-wrapper">
+        <fieldset
+          class="section fieldset is-active mt-5"
+          v-if="currentStep === 1"
+        >
+          <h3>Your Details</h3>
+          <input type="text" name="name" id="name" placeholder="yor name" />
+          <input type="text" name="email" id="email" placeholder="Email" />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="who are you representing"
+          />
+          <input
+            type="number"
+            name="email"
+            id="email"
+            placeholder="phone number"
+          />
+          <input
+            type="number"
+            name="email"
+            id="email"
+            placeholder="another phone number"
+          />
+          <div class="b_t_n_s d-flex flex-column">
+            <div class="button bt_n2 my-2" @click="nextStep">Next</div>
+            <button class="button border-0">save</button>
+          </div>
+        </fieldset>
+        <!-- أضف باقي الستيبس هنا -->
+        <fieldset
+          class="section fieldset is-active mt-5 col-lg-12"
+          v-if="currentStep === 2"
+        >
+          <h3>Your Details</h3>
+          <Stetwo />
+          <div class="b_t_n_s d-flex flex-column">
+            <div class="button bt_n2 my-2" @click="nextStep">Next</div>
+            <button class="button border-0 mb-2">save</button>
+            <button class="button_preve" @click="previousStep">Previous</button>
+          </div>
+        </fieldset>
 
-          <fieldset
-            class="section section2 fieldset mt-5 is-active"
-            style="
-              height: 786px;
-              margin: 307px 0;
-              position: relative;
-              top: -44px;
-            "
-            v-if="currentStep === 3"
-          >
-            <div class="tabels__ my-5">
-              <div class="per text-left">
-                <p class="ml-3">Period</p>
-              </div>
-              <table class="col-lg-12 table">
-                <tr class="">
-                  <th>Periods</th>
-                  <th>Period 1</th>
-                  <th>Period 2</th>
-                  <th>Period 3</th>
-                  <th class="plus">
-                    <button class="_plus_" @click="toglemod($event)">+</button>
-                  </th>
-                </tr>
-                <tr class="date" style="margin: 30px">
-                  <th>Work Houers</th>
-                  <td>From 6 AM - 10 AM</td>
-                  <td>From 6 AM - 10 AM</td>
-                  <td>From 6 AM - 10 AM</td>
-                  <td rowspan="8" class="rowspan" style="width:5%;">
-                    <h4>
-                      <span style="color: var(--blue)">Add a new period</span>
-                      <span style="color: var(--pink)">from here -></span>
-                    </h4>
-                  </td>
-                </tr>
-                <tr class="my-3" v-for="ta in tables" :key="ta.id">
-                  <th>Saturday</th>
-                  <td class="js-maaaan">
-                    <input type="checkbox" name="" id="one" />
-                    <label for="one">
-                      <p>SELECTED</p>
-                    </label>
-                  </td>
-                  <td class="js-maaaan">
-                    <input type="checkbox" name="" id="two" />
-                    <label for="two">
-                      <p>SELECTED</p>
-                    </label>
-                  </td>
-                  <td class="js-maaaan">
-                    <input type="checkbox" name="" id="three" />
-                    <label for="three">
-                      <p>SELECTED</p>
-                    </label>
-                  </td>
-                </tr>
-               
-              </table>
+        <fieldset
+          class="section section2 fieldset mt-5 is-active"
+          style="height: 786px; margin: 307px 0; position: relative; top: -44px"
+          v-if="currentStep === 3"
+        >
+          <div class="tabels__ my-5" style="width:auto;">
+            <div class="per text-left">
+              <p class="ml-3 mt-3">Period</p>
             </div>
-            <div class="b_t_n_s d-flex flex-column d-flex flex-column">
-              <div class="button bt_n4 my-2 ta" @click="nextStep">Next</div>
-              <button class="button_preve ta" @click="previousStep">
-                Previous
-              </button>
-            </div>
-          </fieldset>
+            <table class="col-lg-12 table">
+              <tr class="">
+                <th>Periods</th>
+                <th>Period 1</th>
+                <th>Period 2</th>
+                <th>Period 3</th>
+                <th class="plus">
+                  <button class="_plus_" @click="toglemod($event)">+</button>
+                </th>
+              </tr>
+              <tr class="date" style="margin: 30px">
+                <th>Work Houers</th>
+                <td>From 6 AM - 10 AM</td>
+                <td>From 6 AM - 10 AM</td>
+                <td>From 6 AM - 10 AM</td>
+                <td rowspan="8" class="rowspan" style="width: 5%">
+                  <h4>
+                    <span style="color: var(--blue)">Add a new period</span>
+                    <span style="color: var(--pink)">from here -></span>
+                  </h4>
+                </td>
+              </tr>
+              <tr class="my-3" v-for="ta in tables" :key="ta.id">
+                <th>Saturday</th>
+                <td class="js-maaaan">
+                  <input type="checkbox" name="" id="one" />
+                  <label for="one">
+                    <p>SELECTED</p>
+                  </label>
+                </td>
+                <td class="js-maaaan">
+                  <input type="checkbox" name="" id="two" />
+                  <label for="two">
+                    <p>SELECTED</p>
+                  </label>
+                </td>
+                <td class="js-maaaan">
+                  <input type="checkbox" name="" id="three" />
+                  <label for="three">
+                    <p>SELECTED</p>
+                  </label>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="b_t_n_s d-flex flex-column d-flex flex-column">
+            <div class="button bt_n4 my-2 ta" @click="nextStep">Next</div>
+            <button class="button_preve ta" @click="previousStep">
+              Previous
+            </button>
+          </div>
+        </fieldset>
 
-          <fieldset
-            class="section fieldset mt-5 is-active"
-            v-if="currentStep === 4"
-          >
-            <div class="d-flex justify-content-center align-items-center mb-5">
-              <img
-                src="../assets/cmcm.png"
-                width="130px"
-                height="130px"
-                alt=""
-              />
-            </div>
-            <div class="cvv">
-              <label
-                for="nn"
-                class="text-left pl-2 d-flex align-items-center"
-                style="width: 100%"
-              >
-                <p
-                  class="m-0 text-secondary"
-                  style="font-size: 11px; width: 200px"
-                >
-                  upload logo
-                </p>
-                <input type="file" name="name" id="nn" placeholder="" />
-              </label>
-            </div>
-            <div class="cvv">
-              <label
-                for="nn"
-                class="text-left pl-2 d-flex align-items-center "
-                style="width: 100%"
-              >
-                 
-                <input type="file" name="name" id="nn"  placeholder="  upload general photos about your business up to 4 images " />
-              </label>
-            </div>
-            <div class="photos my-4 flex-wrap">
-              <img
-                width="20px"
-                height="20px"
-               
-                src="../assets/svgexport-17 (53).png"
-                alt=""
-              />
-              <img
-                width="20px"
-                height="20px"
-                src="../assets/svgexport-17 (53).png"
-                alt=""
-              />
-              <img
-                width="20px"
-                height="20px"
-                src="../assets/svgexport-17 (53).png"
-                alt=""
-              />
-              <img
-                width="20px"
-                height="20px"
-                src="../assets/svgexport-17 (53).png"
-                alt=""
-              />
-            </div>
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n2 my-2" @click="nextStep">Next</div>
-              <button class="button border-0 mb-2">save</button>
-              <button class="button_preve" @click="previousStep">
-                Previous
-              </button>
-            </div>
-          </fieldset>
-          <fieldset
-            class="section fieldset is-active mt-5"
-            v-if="currentStep === 5"
+        <fieldset
+          class="section fieldset mt-5 is-active"
+          v-if="currentStep === 4"
+        >
+          <Fsetup />
+          <div class="b_t_n_s d-flex flex-column">
+            <div class="button bt_n2 my-2" @click="nextStep">Next</div>
+            <button class="button border-0 mb-2">save</button>
+            <button class="button_preve" @click="previousStep">Previous</button>
+          </div>
+        </fieldset>
+        <fieldset
+          class="section fieldset is-active mt-5"
+          v-if="currentStep === 5"
+        >
+          <div
+            class="d-flex justify-content-between align-items-center flex-column"
           >
             <div
-              class="d-flex justify-content-between align-items-center flex-column"
+              class="left d-flex justify-content-between align-items-center coll__"
             >
               <div
-                class="left d-flex justify-content-between align-items-center coll__"
+                class="d-flex justify-content-between align-items-center coll_ coll_- mr-5"
               >
-                <div
-                  class="d-flex justify-content-between align-items-center coll_ coll_- mr-5"
-                >
-                  <input type="text" placeholder="service title" class="mx-2" />
-                </div>
-                <div
-                  class="d-flex justify-content-between align-items-center coll_"
-                >
-                  <input type="text" placeholder="cost" class="mx-2" />
-                  <input
-                    type="text"
-                    placeholder="estimated time"
-                    class="mx-2"
-                  />
-                  <button class="bntnt mx-2">-</button>
-                </div>
+                <input type="text" placeholder="service title" class="mx-2" />
               </div>
               <div
-                class="btns__ d-flex justify-content-between align-items-center"
+                class="d-flex justify-content-between align-items-center coll_"
               >
-                <button class="bntnt mx-2" @click="toglemod($event)">+</button>
-              </div>
-            </div>
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n2 my-2" @click="nextStep">Next</div>
-              <button class="button border-0 mb-2">save</button>
-              <button class="button_preve" @click="previousStep">
-                Previous
-              </button>
-            </div>
-          </fieldset>
-          <fieldset
-            class="section fieldset mt-5 is-active nmn"
-            v-if="currentStep === 6"
-          >
-            <div class="parent_div position-relative">
-              <div class="d-flex justify-content-between align-items-center">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="employee name"
-                />
-              </div>
-              <div class="d-flex justify-content-between align-items-center">
-                <label
-                  for="e3"
-                  class="text-left pl-2 d-flex align-items-center vv"
-                >
-                  <p class="m-0 text-secondary" style="font-size: 11px">
-                    employee picture
-                  </p>
-                  <input type="file" name="email" id="e3" placeholder="" />
-                </label>
-              </div>
-              <div class="d-flex justify-content-between align-items-center">
-                <input
-                  type="text"
-                  name="desc"
-                  id="name"
-                  placeholder="description"
-                />
-              </div>
-              <div
-                class="m-auto w-25 btns__ d-flex justify-content-center align-items-center"
-              >
-                <button class="bntnt mx-2">+</button>
-              </div>
-              <button
-                class="bntnt mx-2 position-absolute"
-                style="top: 10px; right: -80px"
-              >
-                -
-              </button>
-            </div>
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n4 my-2" @click="nextStep">Next</div>
-              <button class="button border-0 mb-2">save</button>
-              <button class="button_preve" @click="previousStep">
-                Previous
-              </button>
-            </div>
-          </fieldset>
-
-          <fieldset
-            class="section fieldset is-active mt-5"
-            v-if="currentStep === 7"
-          >
-            <h5 class="my-3">
-              what is the allowable waiting time before the customer is
-              transferred to the no show list
-            </h5>
-            <select name="" id="msms" class="mint">
-              <option value="">how many minute</option>
-              <option value="">5 minute</option>
-              <option value="">10 minute</option>
-              <option value="">15 minute</option>
-              <option value="other">other</option>
-            </select>
-            <input
-              type="number"
-              name="name"
-              id="name"
-              class="nummin"
-              placeholder="other time"
-            />
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n4 my-2" @click="nextStep">Next</div>
-              <button class="button_preve" @click="previousStep">
-                Previous
-              </button>
-            </div>
-          </fieldset>
-
-          <fieldset
-            class="section fieldset mt-5 is-active"
-            v-if="currentStep === 8"
-          >
-            <div
-              class="d-flex justify-content-between align-items-center flex-wrap amount__"
-            >
-              <p class="mt-1">Is it mandatory to pay a to enter the tabor?</p>
-              <div class="sw mr-4">
-                <input type="checkbox" hidden="hidden" id="username1" />
-                <label class="switch" for="username1"></label>
+                <input type="text" placeholder="cost" class="mx-2" />
+                <input type="text" placeholder="estimated time" class="mx-2" />
+                <button class="bntnt mx-2">-</button>
               </div>
             </div>
             <div
-              class="d-flex justify-content-left align-items-center flex-wrap amount__"
+              class="btns__ d-flex justify-content-between align-items-center"
             >
-              <p class="mt-2">Amount paid to be deducted from invoice</p>
+              <button class="bntnt mx-2" @click="toglemod($event)">+</button>
+            </div>
+          </div>
+          <div class="b_t_n_s d-flex flex-column">
+            <div class="button bt_n2 my-2" @click="nextStep">Next</div>
+            <button class="button border-0 mb-2">save</button>
+            <button class="button_preve" @click="previousStep">Previous</button>
+          </div>
+        </fieldset>
+        <fieldset
+          class="section fieldset mt-5 is-active nmn"
+          v-if="currentStep === 6"
+        >
+          <div class="parent_div position-relative">
+            <div class="d-flex justify-content-between align-items-center">
               <input
-                style="width: 230px"
                 type="text"
                 name="name"
                 id="name"
-                placeholder="**"
+                placeholder="employee name"
               />
             </div>
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n4 my-2" @click="nextStep">Next</div>
-              <button class="button border-0 mb-2">save</button>
-              <button class="button_preve" @click="previousStep">
-                Previous
-              </button>
+            <div class="d-flex justify-content-between align-items-center">
+              <label
+                for="e3"
+                class="text-left pl-2 d-flex align-items-center vv"
+              >
+                <p class="m-0 text-secondary" style="font-size: 11px">
+                  employee picture
+                </p>
+                <input type="file" name="email" id="e3" placeholder="" />
+              </label>
             </div>
-          </fieldset>
+            <div class="d-flex justify-content-between align-items-center">
+              <input
+                type="text"
+                name="desc"
+                id="name"
+                placeholder="description"
+              />
+            </div>
+            <div
+              class="m-auto w-25 btns__ d-flex justify-content-center align-items-center"
+            >
+              <button class="bntnt mx-2">+</button>
+            </div>
+            <button
+              class="bntnt mx-2 position-absolute"
+              style="top: 10px; right: -80px"
+            >
+              -
+            </button>
+          </div>
+          <div class="b_t_n_s d-flex flex-column">
+            <div class="button bt_n4 my-2" @click="nextStep">Next</div>
+            <button class="button border-0 mb-2">save</button>
+            <button class="button_preve" @click="previousStep">Previous</button>
+          </div>
+        </fieldset>
 
-          <fieldset
-            class="section fs_ fieldset mt-5 is-active"
-            v-if="currentStep === 9"
-          >
-            <h3>incase of cancelation the customer will receive full refund</h3>
-            <div class="butu">
-              <button
-                style="
-                  background-color: #5f5aff;
-                  padding: 10px;
-                  border-radius: 10px;
-                  margin: 0 8px;
-                  border: none;
-                  color: white;
-                "
-              >
-                Yes
-              </button>
-              <button
-                style="
-                  background-color: #fd0bb4;
-                  padding: 10px;
-                  border-radius: 10px;
-                  margin: 0 8px;
-                  border: none;
-                  color: white;
-                "
-                class="no_" @click="toglemoda"
-              >
-                no
-              </button>
-            </div>
-            <div class="" id="show_show">
-              <p class="mr-4 mt-2"></p>
-              <select class="w-100 form-control" v-if="hide" name="" id="loop"></select>
-            </div>
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n4 my-2" @click="nextStep">Next</div>
-              <div class="button bt_n4 my-2">Save</div>
-              <button class="button_preve" @click="previousStep">
-                Previous
-              </button>
-            </div>
-          </fieldset>
+        <fieldset
+          class="section fieldset is-active mt-5"
+          v-if="currentStep === 7"
+        >
+          <h5 class="my-3">
+            what is the allowable waiting time before the customer is
+            transferred to the no show list
+          </h5>
+          <select name="" id="msms" class="mint">
+            <option value="">how many minute</option>
+            <option value="">5 minute</option>
+            <option value="">10 minute</option>
+            <option value="">15 minute</option>
+            <option value="other">other</option>
+          </select>
+          <input
+            type="number"
+            name="name"
+            id="name"
+            class="nummin"
+            placeholder="other time"
+          />
+          <div class="b_t_n_s d-flex flex-column">
+            <div class="button bt_n4 my-2" @click="nextStep">Next</div>
+            <button class="button_preve" @click="previousStep">Previous</button>
+          </div>
+        </fieldset>
 
-          <fieldset
-            class="section fieldset mt-5 is-active"
-            v-if="currentStep === 10"
+        <fieldset
+          class="section fieldset mt-5 is-active"
+          v-if="currentStep === 8"
+        >
+          <div
+            class="d-flex justify-content-between align-items-center flex-wrap amount__"
           >
-            <h3>adding another branch</h3>
-            <h5 style="font-size: 15px">do you want to add another branch?</h5>
-            <div class="butu">
-              <button
-                class="button bt_n4"
-                style="
-                  background-color: #5f5aff !important;
-                  padding: 10px;
-                  border-radius: 10px;
-                  margin: 0 8px;
-                  border: none;
-                  color: white;
-                "
-              >
-                Yes
-              </button>
-              <button
-                class="btn_noo"
-                style="
-                  background-color: #fd0bb4;
-                  padding: 10px;
-                  border-radius: 10px;
-                  margin: 0 8px;
-                  border: none;
-                  color: white;
-                "
-                @click="toglemoda"
-              >
-                no
-              </button>
+            <p class="mt-1">Is it mandatory to pay a to enter the tabor?</p>
+            <div class="sw mr-4">
+              <input type="checkbox" hidden="hidden" id="username1" />
+              <label class="switch" for="username1"></label>
             </div>
-            <div class="b_t_n_s d-flex flex-column">
-              <div class="button bt_n4 my-2" id="hide_hide" v-if="hide">Submit</div>
-              <div class="button bt_n4 my-2">Save</div>
-              <button class="button_preve" @click="previousStep">
-                Previous
-              </button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
+          </div>
+          <div
+            class="d-flex justify-content-left align-items-center flex-wrap amount__"
+          >
+            <p class="mt-2">Amount paid to be deducted from invoice</p>
+            <input
+              style="width: 230px"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="**"
+            />
+          </div>
+          <div class="b_t_n_s d-flex flex-column">
+            <div class="button bt_n4 my-2" @click="nextStep">Next</div>
+            <button class="button border-0 mb-2">save</button>
+            <button class="button_preve" @click="previousStep">Previous</button>
+          </div>
+        </fieldset>
+
+        <fieldset
+          class="section fs_ fieldset mt-5 is-active"
+          v-if="currentStep === 9"
+        >
+          <h3>incase of cancelation the customer will receive full refund</h3>
+          <div class="butu">
+            <button
+              style="
+                background-color: #5f5aff;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 0 8px;
+                border: none;
+                color: white;
+              "
+            >
+              Yes
+            </button>
+            <button
+              style="
+                background-color: #fd0bb4;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 0 8px;
+                border: none;
+                color: white;
+              "
+              class="no_"
+              @click="toglemoda"
+            >
+              no
+            </button>
+          </div>
+          <div class="" id="show_show">
+            <p class="mr-4 mt-2"></p>
+            <select
+              class="w-100 form-control"
+              v-if="hide"
+              name=""
+              id="loop"
+            ></select>
+          </div>
+          <div class="b_t_n_s d-flex flex-column">
+            <div class="button bt_n4 my-2" @click="nextStep">Next</div>
+            <div class="button bt_n4 my-2">Save</div>
+            <button class="button_preve" @click="previousStep">Previous</button>
+          </div>
+        </fieldset>
+
+        <fieldset
+          class="section fieldset mt-5 is-active"
+          v-if="currentStep === 10"
+        >
+          <h3>adding another branch</h3>
+          <h5 style="font-size: 15px">do you want to add another branch?</h5>
+          <div class="butu">
+            <button
+              class="button bt_n4"
+              style="
+                background-color: #5f5aff !important;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 0 8px;
+                border: none;
+                color: white;
+              "
+            >
+              Yes
+            </button>
+            <button
+              class="btn_noo"
+              style="
+                background-color: #fd0bb4;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 0 8px;
+                border: none;
+                color: white;
+              "
+              @click="toglemoda"
+            >
+              no
+            </button>
+          </div>
+          <div class="b_t_n_s d-flex flex-column">
+            <button class="button bt_n4 my-2" id="hide_hide" v-if="hide">
+              Submit
+            </button>
+            <button class="button bt_n4 my-2">Save</button>
+            <button class="button_preve" @click="previousStep">Previous</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
+  </div>
 </template>
 
 <script>
@@ -714,17 +447,19 @@ $(document).ready(function () {
   setupLabelClick();
   setupFormNavigation();
 });
-
+import Fsetup from "../layout/Fsetup.vue";
+import Stetwo from "../layout/Stetwo.vue";
 export default {
   name: "test",
   data() {
     return {
       currentStep: 1, // Start with the first step
       closePopup: false,
-      hide:false,
-      tables:[{id:1,},{id:2,},{id:3,},{id:4,},]
+      hide: false,
+      tables: [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }],
     };
   },
+  components: { Fsetup, Stetwo },
   computed: {
     currentPath() {
       return this.$route.path;
@@ -746,11 +481,11 @@ export default {
       this.currentStep--;
     },
     toglemod(event) {
-      event.preventDefault(); // منع سلوك افتراضي للزر
+      event.preventDefault(); //
       this.closePopup = !this.closePopup;
     },
     toglemoda(event) {
-      event.preventDefault(); // منع سلوك افتراضي للزر
+      event.preventDefault(); //
       this.hide = !this.hide;
     },
   },
@@ -779,15 +514,13 @@ input:checked + .switch {
   }
   .form-wrapper .section.is-active {
     width: 90%;
-   
-}
-.ta{
-  width: 46%;
-}
-.tabels__ {
-  width:46%;
-}
- 
+  }
+  .ta {
+    width: 46%;
+  }
+  .tabels__ {
+    width: 46%;
+  }
 }
 
 input:checked + .switch::before {
@@ -1073,8 +806,6 @@ table tr {
   .bt_n {
     width: 81%;
   }
-
-
 
   .container {
     padding: 0 !important;

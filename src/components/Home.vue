@@ -20,9 +20,11 @@
             </div>
             <div class="paragraph paragraph2 col-lg-6 mr-5">
               <h2 class="mb-5">WOMEN'S SALON</h2>
+              <router-link to="/service">
               <button class="buttons_join" style="color: #fd0bb5">
                 Join tabor
               </button>
+              </router-link>
             </div>
             <div class="paragraphman paragraph2 col-lg-6 mr-5"></div>
           </div>
@@ -32,9 +34,11 @@
             <!-- <div class="image_ col-lg-5 mr-5"></div> -->
             <div class="paragraph col-lg-6 mr-5">
               <h2 class="mb-5">MEN'S SALON</h2>
+               <router-link to="/service">
               <button class="buttons_join" style="color: #5f5aff">
                 Join tabor
               </button>
+              </router-link>
             </div>
             <div class="paragraphmana paragraph2 col-lg-6 mr-5"></div>
           </div>

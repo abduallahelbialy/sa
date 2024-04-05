@@ -320,7 +320,7 @@
             <div class="d-flex gap-3">
 
             <h2 class="mr-5">Operation</h2>
-            <div class="switch_ ml-5 d-flex align-items-center">
+            <div class="switch_ ml-5 d-flex align-items-center gap-2">
               <span>open</span>
               <div class="sw">
                 <input type="checkbox" hidden="hidden" id="username" />
@@ -471,6 +471,22 @@ header {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to left, #fd0bb433, #605aff36);
+}
+@media (max-width:477px) {
+  .switch {
+    display: inline-block;
+    position: relative;
+    top: 0px !important;
+    display: flex !important;
+    gap: 16px !important;
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    background: red;
+    transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    vertical-align: middle;
+    cursor: pointer;
+}
 }
 
 .opa {

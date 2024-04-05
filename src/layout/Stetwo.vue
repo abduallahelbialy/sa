@@ -1,64 +1,177 @@
 <template>
-  <div class="d-flex justify-content-center align-items-center mb-5">
-    <img src="../assets/cmcm.png" width="130px" height="130px" alt="" />
-  </div>
-  <div class="cvv">
-    <label
-      for="nn"
-      class="text-left pl-2 d-flex align-items-center"
-      style="width: 100%"
-    >
-      <p class="m-0 text-secondary" style="font-size: 11px; width: 200px">
-        upload logo
-      </p>
-      <input type="file" name="name" id="nn" placeholder="" />
-    </label>
-  </div>
-  <div class="cvv">
-    <label
-      for="nn"
-      class="text-left pl-2 d-flex align-items-center"
-      style="width: 100%"
-    >
+  <div class="d-flex cvcvc">
+    <div class="col-lg-6 col-md-4 m-2">
       <input
-        type="file"
+        type="text"
         name="name"
-        id="nn"
-        placeholder="  upload general photos about your business up to 4 images "
+        id="name"
+        placeholder="Service Provider Name that will appered to customer"
       />
-    </label>
-  </div>
-  <div class="photos my-4 flex-wrap">
-    <img
-      width="20px"
-      height="20px"
-      src="../assets/svgexport-17 (53).png"
-      alt=""
-    />
-    <img
-      width="20px"
-      height="20px"
-      src="../assets/svgexport-17 (53).png"
-      alt=""
-    />
-    <img
-      width="20px"
-      height="20px"
-      src="../assets/svgexport-17 (53).png"
-      alt=""
-    />
-    <img
-      width="20px"
-      height="20px"
-      src="../assets/svgexport-17 (53).png"
-      alt=""
-    />
+      <input type="text" name="email" id="email" placeholder="Company Name" />
+      <select name="category" id="msms">
+        <option value="">resturant</option>
+        <option value="">spa</option>
+        <option value="">women' Salons</option>
+        <option value="">men' Salons</option>
+        <option value="">other</option>
+      </select>
+      <div class="d-flex justify-content-between align-items-center size_w">
+        <input type="text" name="email" id="email" placeholder="cr number" />
+        <label
+          for="e1"
+          class="text-left pl-2 d-flex align-items-center justify-content-center"
+          style="padding: 0 !important"
+        >
+          <p
+            class="m-0 text-secondary"
+            style="font-size: 11px; width: fit-content"
+          >
+            <i class="fas fa-camera"></i>
+          </p>
+          <input
+            type="file"
+            name="email"
+            id="e1"
+            placeholder=""
+            class="d-none"
+          />
+        </label>
+      </div>
+      <div class="d-flex justify-content-between align-items-center size_w">
+        <input type="text" name="email" id="email" placeholder="tax number" />
+        <label
+          for="e1"
+          class="text-left pl-2 d-flex align-items-center justify-content-center"
+          style="padding: 0 !important"
+        >
+          <p
+            class="m-0 text-secondary"
+            style="font-size: 11px; width: fit-content"
+          >
+            <i class="fas fa-camera"></i>
+          </p>
+          <input
+            type="file"
+            name="email"
+            id="e1"
+            placeholder=""
+            class="d-none"
+          />
+        </label>
+      </div>
+      <div class="d-flex justify-content-between align-items-center size_w">
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="wasel mail number"
+        />
+        <label
+          for="e1"
+          class="text-left pl-2 d-flex align-items-center justify-content-center"
+          style="padding: 0 !important"
+        >
+          <p
+            class="m-0 text-secondary"
+            style="font-size: 11px; width: fit-content"
+          >
+            <i class="fas fa-camera"></i>
+          </p>
+          <input
+            type="file"
+            name="email"
+            id="e1"
+            placeholder=""
+            class="d-none"
+          />
+        </label>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="attachment of signed tabor contract"
+        />
+        <label
+          for="e1"
+          class="text-left pl-2 d-flex align-items-center justify-content-center"
+          style="padding: 0 !important"
+        >
+          <p
+            class="m-0 text-secondary"
+            style="font-size: 11px; width: fit-content"
+          >
+            <i class="fas fa-camera"></i>
+          </p>
+          <input
+            type="file"
+            name="email"
+            id="e1"
+            placeholder=""
+            class="d-none"
+          />
+        </label>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-4 m-2">
+        
+      <select name="country" id="msms">
+        <option value="" disabled>country</option>
+        <option value="">palestine</option>
+        <option value="">eygpt</option>
+        <option value="">sudan</option>
+        <option value="">usa</option>
+        <option value="">other</option>
+      </select>
+      <select name="city" id="msms">
+        <option value="" disabled>city</option>
+        <option value="">gaza</option>
+        <option value="">hebron</option>
+        <option value="">jerusalem</option>
+        <option value="">london</option>
+        <option value="">other</option>
+      </select>
+      <div class="d-flex justify-content-between align-items-center">
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="attachment of signed tabor contract"
+        />
+        <label
+          for="e1"
+          class="text-left pl-2 d-flex align-items-center justify-content-center"
+          style="padding: 0 !important"
+        >
+          <p
+            class="m-0 text-secondary"
+            style="font-size: 11px; width: fit-content"
+          >
+            <i class="fas fa-camera"></i>
+          </p>
+          <input
+            type="file"
+            name="email"
+            id="e1"
+            placeholder=""
+            class="d-none"
+          />
+        </label>
+      </div>
+      <input
+        type="text"
+        name="google"
+        id="email"
+        placeholder="google location"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "setup",
+  name: "Setwo",
   data() {
     return {
       currentStep: 1, // Start with the first step

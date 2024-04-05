@@ -708,6 +708,7 @@ header {
   padding: 15px 0;
 }
 
+
 .q_p {
   display: flex;
   position: fixed;
